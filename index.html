@@ -1,148 +1,85 @@
-<!DOCTYPE HTML>
-<TITLE>AMAD ZARAK</TITLE>
-<STYLE TYPE="TEXT/CSS">
-BODY
-{
-BACKGROUND: #EEE;
-MARGIN:40PX AUTO;
-MAX-WIDTH:650PX;
-LINE-HEIGHT:1.6;
-FONT-SIZE:18PX;
-COLOR:#444;
-PADDING:0 10PX}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio/IG Clone</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <header>
 
-H1,H2,H3{
-LINE-HEIGHT:1.2
-}
-A {
-COLOR: BLACK;
-BACKGROUND-COLOR:#FFFF00;
-}
+      <div class="container">
 
-A:VISITED {
-  COLOR: BLACK;
-}
-A:HOVER{
-COLOR: #CCBB7F;
-}
-</STYLE>
+        <div class="profile">
 
-<!DOCTYPE HTML>
-<HTML>
-<HEAD>
-<STYLE>
-BODY {
-  FONT-FAMILY: 'COURIER NEW', MONOSPACE;
-}
-FIELDSET {
-    BORDER: 1PX SOLID #000;
-}
-</STYLE>
-</HEAD>
-<BODY>
-<H1>~/AMAD/PORTFOLIO</H1>
-<P>MY NAME IS <B>AMAD ZARAK.</B> WELCOME TO MY PORTFOLIO.</P>
-<P></P>
-<P>SELECTED PROJECTS:</P>
+          <div class="profile-image">
 
-<!--
-<FIELDSET>
-  <LEGEND>PROJECT # 1</LEGEND>
-  <H2><A HREF="">POLITICAL NEWS SENTIMENT ANALYSIS</A></H2>
-  <UL>
-  <B>SKILLS GAINED:</B>
-  <LI>WEB SCRAPING</LI>
-  <LI>UX</LI>
-  <LI>NLP</LI>
-  </UL>
-</FIELDSET>
+            <img src="myface.jpeg" style="width:250px;height:250px;" alt="">
 
-<FIELDSET>
-  <LEGEND>PROJECT # 2</LEGEND>
-  <H2><A HREF="">RESUME PARSER + CANDIDATE MATCHING</A></H2>
-  <UL>
-  <B>SKILLS GAINED:</B>
-  <LI>NLP</LI>
-  <LI>STATISTICAL ANALYSIS</LI>
-  <LI>UNSTRUCTURED DATA MANIPULATION</LI>
-  </UL>
-</FIELDSET>
+          </div>
 
--->
-  
-<FIELDSET>
-  <LEGEND>PROJECT # 1</LEGEND>
-  <H2><A HREF="https://github.com/amadzarak/CrawlerForNLP">WEB CRAWLER</A></H2>
-  <UL>
-  <B>SKILLS GAINED:</B>
-  <LI>WEB SCRAPING</LI>
-  <LI>NLP</LI>
-  <LI>SVC MODELS</LI>
-  </UL>
-</FIELDSET>
+          <div class="profile-user-settings">
 
-<FIELDSET>
-  <LEGEND>PROJECT # 2</LEGEND>
-  <H2><A HREF="https://github.com/amadzarak/EEG-TimeSeries-Analysis">EEG DATA</A></H2>
-  <UL>
-  <B>SKILLS GAINED:</B>
-  <LI>TIME SERIES ANALYSIS</LI>
-  <LI>FAST FOURIER TRANSFORM</LI>
-  <LI>MOTIF DISCOVERY</LI>
-  </UL>
-</FIELDSET>  
+            <h1 class="profile-user-name">Amad Zarak</h1>
 
-<FIELDSET>
-  <LEGEND>PROJECT # 3</LEGEND>
-  <H2><A HREF="https://github.com/amadzarak/Schedulr-v.1.0/blob/main/README.md">PRACTICE MANAGEMENT WEB-APP</A></H2>
-  <UL>
-  <B>SKILLS GAINED:</B>
-  <LI>CRUD</LI>
-  <LI>HIPAA</LI>
-  <LI>UI/UX</LI>
-  <LI>FULL STACK DEVELOPMENT</LI>
-  <LI>PRODUCT DESIGN</LI>
-  </UL>
-</FIELDSET>
-  
+            <button class="btn profile-edit-btn">View Resume</button>
 
-<FIELDSET>
-  <LEGEND>PROJECT # 4</LEGEND>
-  <H2><A HREF="https://github.com/amadzarak/WordleAlgorithm/blob/main/README.md">WORDLE SOLVER</A></H2>
-  <UL>
-  <B>SKILLS GAINED:</B>
-  <LI>SORTING AND RANKING ALGORITHMS</LI>
-  <LI>SQL</LI>
-  <LI>PROBLEM SOLVING</LI>
-  <LI>TUPLES, DICTIONARY, LIST COMPREHENSION</LI>
-  <LI>STATISTICAL METHODS</LI>
-  </UL>
-</FIELDSET>
+            <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
 
-<P>SELECTED ELEMENTS:</P>
-<FIELDSET>
-  <H2>FILTERS</H2>
-  <P>Using a dictionary or list, one can create filters for a multitude of applications. Such as creating spec sheets, or filters for search functions.</P>
-</FIELDSET>
+          </div>
 
-<FIELDSET>
-  <H2>AUTOCOMPLETE</H2>
-<P>Using a database or list, one can iterate and create an autocomplete feature in a search bar</P>
-</FIELDSET>
+          <div class="profile-stats">
 
-<P>TEMPLATES:</P>
-<FIELDSET>
-  <H2>DASHBOARD</H2>
-</FIELDSET>
+            <ul>
+              <li>Phone: <span class="profile-stat-count">(656) 666-2552</span></li>
+              <li>Email: <span class="profile-stat-count">amadzarak16@gmail.com</span></li>
+              
+            </ul>
 
+          </div>
 
-<P>COPYRIGHT (C) 2022</P>
-<P>TAMPA, FL.</P>
-<P>AMADZARAK16@GMAIL.COM</P>
-<P>(813) 437-7268.</P>
-<SCRIPT>
-VAR DT = NEW DATE().TODATESTRING();
-DOCUMENT.GETELEMENTBYID('DATE').INNERHTML=DT;
-</SCRIPT>
-</BODY>
-</HTML>
+          <div class="profile-bio">
+
+            <p><span class="profile-real-name">
+            Software engineer from Tampa, FL ☀️ </br>
+            Recent graduate with a strong track record and passion for building impactful mobile 📱 applications. Proven ability to develop, manage, and deploy applications used by thousands of users in production environments.</p>
+
+          </div>
+
+        </div>
+        <!-- End of profile section -->
+
+      </div>
+      <!-- End of container -->
+
+    </header>
+
+    <main>
+
+      <div class="container">
+
+        <div class="gallery" id="posts-gallery">
+        </div>
+        <!-- End of gallery -->
+
+        <!--<div class="loader"></div>-->
+
+      </div>
+      <!-- End of container -->
+
+    </main>
+  </body>
+
+  <script> 
+    var htmlElements = "";
+      for (var i = 1; i < 10; i++) {
+         htmlElements += `<div class="gallery-item" tabindex="0"><img src="images/img${i}.png" class="gallery-image" alt=""><div class="gallery-item-type"><span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i></div><div class="gallery-item-info"><ul><li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 30</li><li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li></ul></div></div>`;
+      }
+      var container = document.getElementById("posts-gallery");
+      container.innerHTML = htmlElements;
+    </script> 
+</html>
