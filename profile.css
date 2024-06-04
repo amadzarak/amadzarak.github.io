@@ -377,3 +377,69 @@ Remove or comment-out the code block below to see how the browser will fall-back
       }
   }
 }
+
+
+
+.jw-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, .75);
+    padding: 40px;
+    overflow: auto;
+}
+
+.jw-modal.open {
+    display: block;
+}
+
+.jw-modal-body {
+    /*padding: 20px;*/
+    background: #fff;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.modal-image {
+  float: left;
+  width: 60%;
+  
+}
+
+.modal-description {
+  float: left;
+  width: 40%;
+  
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%; /* calculate by aspect ratio (h / w * 100%) */
+}
+.video-container .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* The Close Button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+}
+
+body.jw-modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}

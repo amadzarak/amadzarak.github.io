@@ -18,7 +18,7 @@
 
           <div class="profile-image">
 
-            <img src="images/myface.jpeg" style="width:250px;height:250px;" alt="">
+            <img src="myface.jpeg" style="width:250px;height:250px;" alt="">
 
           </div>
 
@@ -62,6 +62,24 @@
 
       <div class="container">
 
+        <div id="modal-container" class="jw-modal">
+          <div class="close-button" onclick="closeImage()">
+          <svg aria-label="Close" class="x1lliihq x1n2onr6 x9bdzbf" fill="white" height="18" role="img" viewBox="0 0 24 24" width="18"><title>Close</title><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline><line fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
+        </div>
+          <div class="jw-modal-body">
+            
+            <div class="row">
+            <div class="modal-image" id="modal-image-container">
+            </div>
+            <div class="modal-description">
+              
+              
+              <p>Desciption</p>
+            </div>
+          </div>
+          </div>
+        </div>
+
         <div class="gallery" id="posts-gallery">
         </div>
         <!-- End of gallery -->
@@ -75,11 +93,215 @@
   </body>
 
   <script> 
+    let api_simulate = [{
+  "post_id": 1,
+  "type": "video",
+  "filename": "PrototypeRoundManager.mov",
+  "preview_img": "img1-min",
+},
+{
+  "post_id": 2,
+  "type": "video",
+  "filename": "add_patient_func.mov",
+  "preview_img": "img2-min",
+},
+{
+  "post_id": 3,
+  "type": "video",
+  "filename": "advancedCRM2.mov",
+  "preview_img": "img3-min",
+},
+{
+  "post_id": 4,
+  "type": "video",
+  "filename": "advancedCRMFeature2.mov",
+  "preview_img": "img4-min",
+},
+{
+  "post_id": 5,
+  "type": "video",
+  "filename": "advanced_scheduler.MP4",
+  "preview_img": "img5-min",
+},
+{
+  "post_id": 6,
+  "type": "img",
+  "filename": "ai_text_editor.PNG",
+  "preview_img": "img6-min",
+},
+{
+  "post_id": 7,
+  "type": "video",
+  "filename": "business_card_ai_scan.MP4",
+  "preview_img": "img7-min",
+},
+{
+  "post_id": 8,
+  "type": "video",
+  "filename": "contact_import_1.MP4",
+  "preview_img": "img8-min",
+},
+{
+  "post_id": 9,
+  "type": "video",
+  "filename": "contact_import_2.MP4",
+  "preview_img": "img9-min",
+},
+{
+  "post_id": 10,
+  "type": "video",
+  "filename": "custom_email_parser.MP4",
+  "preview_img": "img10-min",
+},
+{
+  "post_id": 11,
+  "type": "video",
+  "filename": "custom_social_profile.MP4",
+  "preview_img": "img11-min",
+},
+{
+  "post_id": 13,
+  "type": "video",
+  "filename": "custom_video_call_controls.MP4",
+  "preview_img": "img13-min",
+},
+{
+  "post_id": 14,
+  "type": "video",
+  "filename": "demo_1.mov",
+  "preview_img": "img14-min",
+  "pinned": true,
+},
+{
+  "post_id": 15,
+  "type": "video",
+  "album": true,
+  "filename": "likes_and_matches.mov",
+  "preview_img": "img15a-min",
+},
+{
+  "post_id": 16,
+  "type": "video",
+  "filename": "prototype_data_entry.mov",
+  "preview_img": "img16-min",
+},
+{
+  "post_id": 17,
+  "type": "img",
+  "filename": "scheduler_with_live_database.PNG",
+  "preview_img": "img17-min",
+},
+{
+  "post_id": 18,
+  "type": "img",
+  "filename": "speed_dating_management_first_prototype.MP4",
+  "preview_img": "img18-min",
+},
+{
+  "post_id": 19,
+  "type": "img",
+  "filename": "speed_dating_ui.PNG",
+  "preview_img": "img19-min",
+},
+{
+  "post_id": 20,
+  "type": "img",
+  "filename": "two_way_video_call.PNG",
+  "preview_img": "img20-min",
+  "pinned": true,
+},
+{
+  "post_id": 21,
+  "type": "img",
+  "filename": "two_way_video_desktop_side.png",
+  "preview_img": "img21-min",
+},
+{
+  "post_id": 22,
+  "type": "video",
+  "filename": "video_call_entry.MP4",
+  "preview_img": "img22-min",
+},
+{
+  "post_id": 23,
+  "type": "video",
+  "filename": "websockets_with_push_notification.MP4",
+  "preview_img": "img23-min",
+},
+{
+  "post_id": 24,
+  "type": "img",
+  "filename": "speed_dating_ui.PNG",
+  "preview_img": "img24-min",
+}];
+
     var htmlElements = "";
-      for (var i = 1; i < 10; i++) {
-         htmlElements += `<div class="gallery-item" tabindex="0"><img src="images/img${i}.png" class="gallery-image" alt=""><div class="gallery-item-type"><span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i></div><div class="gallery-item-info"><ul><li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 30</li><li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li></ul></div></div>`;
+      for (var i = 0; i < api_simulate.length; i++) {
+         htmlElements += `
+         <div class="gallery-item" onclick="openImage(${i}, ${api_simulate[i]['post_id']})" tabindex="0" on>
+          <img src="./thumbnails/${api_simulate[i]['preview_img']} Cropped-compressed.jpeg" class="gallery-image" alt="">
+            <div class="gallery-item-type">
+              <span class="visually-hidden">Video</span>
+                <i class="fas fa-video" aria-hidden="true"></i>
+            </div>
+            <div class="gallery-item-info">
+              <ul>
+                <li class="gallery-item-likes">
+                  <span class="visually-hidden">Likes:</span>
+                    <i class="fas fa-heart" aria-hidden="true"></i> 30</li>
+                <li class="gallery-item-comments">
+                  <span class="visually-hidden">Comments:</span>
+                    <i class="fas fa-comment" aria-hidden="true"></i> 2</li>
+              </ul>
+            </div>
+          </div>`;
       }
       var container = document.getElementById("posts-gallery");
       container.innerHTML = htmlElements;
-    </script> 
+
+    function openImage(array_index, post_id) {
+        var modal = document.getElementById("modal-container");
+        //document.getElementById(index).classList.add('open');
+        //document.getElementById("modal-container").add('jw-modal-open');
+        modal.style.display = "block";
+
+        var image_modal_container = document.getElementById("modal-image-container");
+        if (api_simulate[array_index]["type"] == "img") {
+          image_modal_container.innerHTML = `<img src="media/${api_simulate[array_index]["filename"]}" class="gallery-image" alt="">`;
+        } else {
+          image_modal_container.innerHTML = `
+          <div class="video-container">
+          <video class="video" controls>
+          <source src="media/${api_simulate[array_index]["filename"]}" 
+          type="video/mp4">
+          </video>
+          </div>
+          `;
+        }
+        
+      }
+
+    function closeImage() {
+      var modal = document.getElementById("modal-container");
+      modal.style.display = "none";
+    }
+    </script>
+
+    <script>
+
+
+var htmlElements = "";
+ for (var i = 0; i < api_simulate.length; i++) {
+         htmlElements += `<div>
+         <p>${api_simulate[i]['post_id']}</p>
+         <p>${api_simulate[i]['type']}</p>
+         <p>media/${api_simulate[i]['filename']}</p>
+         <p>compressed/${api_simulate[i]['preview_img']}</p>
+         </div>`;
+      }
+      var container = document.getElementById("json-raw-display");
+      container.innerHTML = htmlElements;
+
+</script>
+
 </html>
